@@ -7,7 +7,7 @@ public partial class Task
 {
     public int TaskId { get; set; }
 
-    public string Task1 { get; set; } = null!;
+    public string TaskName { get; set; } = null!;
 
     public string? DueDate { get; set; }
 
