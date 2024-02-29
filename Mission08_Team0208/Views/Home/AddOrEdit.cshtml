@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Task
+
+<h1>Add or Edit the Tasks</h1>
+
+
+<form method="post">
+    <label asp-for="TaskName">Task Name:</label>
+    <input asp-for="TaskName" required><br><br>
+
+    <label asp-for="DueDate">Due Date:</label>
+    <input asp-for="DueDate"><br><br>
+
+    <label asp-for="Quadrant">Quadrant:</label>
+    <input asp-for="Quadrant"><br><br>
+
+    <label asp-for="Catergory">Catergory:</label>
+    <select asp-for="Catergory">
+        <option value="Home">Home</option>
+        <option value="School">School</option>
+        <option value="Work">Work</option>
+        <option value="Church">Church</option>
+    </select><br><br>
+
+    <label asp-for="Completed">Completed:</label>
+    <select asp-for="Completed">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+</form>
