@@ -47,7 +47,7 @@
     </div>
 </div>
 
-@foreach(var x in Model)
+@foreach (var x in Model)
 {
     <div class="containerRound" style="border: 1px solid black">
         <div class="row">
@@ -96,8 +96,3 @@
     <div><a class="btn btn-into" asp-controller="Home" asp-action="Edit" asp-route-id="@x.ApplicationId">Edit</a></div>
     <div><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.ApplicationId">Delete</a></div>
 }
-
-
-
-
-@* <h2>Successfully Deleted. Deleted the record for @Model.Task in quadrant @Model.Quadrant?</h2> *@
