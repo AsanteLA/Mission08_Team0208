@@ -9,5 +9,5 @@ public partial class Quadrant
     [Key]
     public int QuadrantId { get; set; }
 
-    public string QuadrantName { get; set; } = null!;
+    public string QuadrantName { get; set; }
 }

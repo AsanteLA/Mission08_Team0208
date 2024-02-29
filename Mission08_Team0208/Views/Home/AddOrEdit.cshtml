@@ -4,7 +4,7 @@
 <h1>Add or Edit the Tasks</h1>
 
 
-<form method="post">
+<form asp-action="AddOrEdit" method="post">
     <label asp-for="TaskName">Task Name:</label>
     <input asp-for="TaskName" >
     <br><br>
@@ -14,18 +14,18 @@
     <label asp-for="Quadrant">Quadrant:</label>
     <select asp-for="Quadrant">
         <option value="">Select a Quadrant</option>
-        @foreach(Category c in ViewBag.Quadrants)
+        @foreach(Quadrant q in ViewBag.Quadrants)
         {
-            <option value="@c.CategoryId">@c.CategoryName</option>
+            <option value="@q.QuadrantId">@q.QuadrantName</option>
         }
     </select>
     <br><br>
     <label asp-for="Category">Category:</label>
     <select asp-for="Category">
         <option value="">Select a Category</option>
-        @foreach (Quadrant q in ViewBag.Categories)
+        @foreach (Category c in ViewBag.Categories)
         {
-            <option value="@q.QuadrantId">@q.QuadrantName</option>
+            <option value="@c.CategoryId">@c.CategoryName</option>
         }
     </select>
     <br><br>

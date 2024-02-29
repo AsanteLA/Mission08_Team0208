@@ -17,6 +17,7 @@ namespace Mission08_Team0208.Controllers
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult AddOrEdit()
         {
@@ -28,8 +29,30 @@ namespace Mission08_Team0208.Controllers
                 .OrderBy(x => x.QuadrantId)
                 .ToList();
 
-            return View();
+            return View("AddOrEdit", new TaskInfo());
         }
 
+        [HttpPost]
+        public IActionResult AddOrEdit(TaskInfo response)
+        {
+            if(ModelState.IsValid) 
+            {
+                _repo.AddTask(response);
+                return View("Confirmation", response);
+            }
+            else
+            {
+                ViewBag.Categories = _repo.Categories
+                .OrderBy(x => x.CategoryId)
+                .ToList();
+
+                ViewBag.Quadrants = _repo.Quadrants
+                    .OrderBy(x => x.QuadrantId)
+                    .ToList();
+
+                return View(response);
+            }
+            
+        }
     }
 }

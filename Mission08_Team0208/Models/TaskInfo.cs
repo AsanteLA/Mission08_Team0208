@@ -11,17 +11,17 @@ public partial class TaskInfo
     public int TaskId { get; set; }
 
     [Required]
-    public string TaskName { get; set; } = null!;
+    public string TaskName { get; set; }
 
     public string? DueDate { get; set; }
 
     [ForeignKey("QuadrantId")]
     [Required]
-    public string? QuadrantName { get; set; } = null!;
+    public int? QuadrantId { get; set; }
     public Quadrant? Quadrant { get; set; }
 
     [ForeignKey("CategoryId")]
-    public string? CategoryName { get; set; }
+    public int? CategoryId { get; set; }
     public Category? Category { get; set; }
 
     public bool? Completed { get; set; }
