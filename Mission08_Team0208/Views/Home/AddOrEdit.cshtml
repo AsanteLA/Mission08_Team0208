@@ -11,27 +11,34 @@
 
 <form method="post">
     <label asp-for="TaskName">Task Name:</label>
-    <input asp-for="TaskName" ><br><br>
-
+    <input asp-for="TaskName" >
+    <br><br>
     <label asp-for="DueDate">Due Date:</label>
-    <input asp-for="DueDate"><br><br>
-
+    <input asp-for="DueDate">
+    <br><br>
     <label asp-for="Quadrant">Quadrant:</label>
-    <input asp-for="Quadrant"><br><br>
-
+    <select asp-for="Quadrant"><br><br>
+        <option value="">Select a Quadrant</option>
+        @foreach(Category c in ViewBag.Categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
+    </select>
+    <br><br>
     <label asp-for="Category">Category:</label>
     <select asp-for="Category">
-        <option value="Home">Home</option>
-        <option value="School">School</option>
-        <option value="Work">Work</option>
-        <option value="Church">Church</option>
-    </select><br><br>
-
+        <option value="">Select a Category</option>
+        @foreach (Quadrant q in ViewBag.Quadrants)
+        {
+            <option value="@q.QuadrantId">@q.QuadrantName</option>
+        }
+    </select>
+    <br><br>
     <label asp-for="Completed">Completed:</label>
     <select asp-for="Completed">
         <option value="True">Yes</option>
         <option value="False">No</option>
-    </select><br><br>
-
+    </select>
+    <br><br>
     <button type="submit">Submit</button>
 </form>
