@@ -12,6 +12,11 @@ namespace Mission08_Team0208.Controllers
             
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public IActionResult AddOrEdit()
         {
             return View();
