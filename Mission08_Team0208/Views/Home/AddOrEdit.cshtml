@@ -1,9 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
+﻿
 @model TaskInfo
 
 <h1>Add or Edit the Tasks</h1>
@@ -17,7 +12,7 @@
     <input asp-for="DueDate">
     <br><br>
     <label asp-for="Quadrant">Quadrant:</label>
-    <select asp-for="Quadrant"><br><br>
+    <select asp-for="Quadrant">
         <option value="">Select a Quadrant</option>
         @foreach(Category c in ViewBag.Categories)
         {
