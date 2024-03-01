@@ -8,7 +8,9 @@
     border-radius: 10px; /* Adjust the value as needed */
     overflow: hidden; /* Ensures that the border-radius is applied correctly */
 }
-
+body {
+    background-color: #fff2ec;/*Changes the background color to light peach*/
+}
 
 a.navbar-brand {
     white-space: normal;
