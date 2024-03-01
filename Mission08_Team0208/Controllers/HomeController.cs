@@ -102,7 +102,7 @@ namespace Mission08_Team0208.Controllers
         public IActionResult Edit(TaskInfo UpdatedInfo)
         {
             _repo.Edit(UpdatedInfo);
-            return RedirectToAction("QTest");
+            return RedirectToAction("Quadrant");
         }
 
         [HttpGet]
@@ -127,7 +127,7 @@ namespace Mission08_Team0208.Controllers
         {
             _repo.Delete(Delete);
 
-            return RedirectToAction("QTest");
+            return RedirectToAction("Quadrant");
         }
     }
 }
