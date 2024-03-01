@@ -9,10 +9,10 @@
 <h2>Record Deletion Page</h2>
 <br /><br />
 <h3>Are you sure you would like to delete the record for @Model.TaskName in quadrant @Model.QuadrantId ?</h3>
-@* <form method="post">
-    <input type="hidden" asp-for="ApplicationId" />
+<form method="post">
+    <input type="hidden" asp-for="QuadrantId" />
 
     <button type="submit">Delete</button>
     <a class="btn btn-info" asp-controller="Home" asp-action="Quadrant">Cancel</a>
 
-</form>  *@
+</form>
