@@ -59,4 +59,14 @@ body {
     background-color: #afafaf; /* Background color for active page */
 }
 
+.button {
+    background-color: #afafaf; /* Green */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
 
