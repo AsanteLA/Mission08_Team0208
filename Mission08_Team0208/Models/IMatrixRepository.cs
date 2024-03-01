@@ -12,9 +12,9 @@ namespace Mission08_Team0208.Models
 
         public void AddTask(TaskInfo task);
 
-        public void Edit(TaskInfo task);
+        public void Edit(TaskInfo UpdatedInfo);
 
-        public void Delete(TaskInfo task);
+        public void Delete(TaskInfo Delete);
 
     }
 }

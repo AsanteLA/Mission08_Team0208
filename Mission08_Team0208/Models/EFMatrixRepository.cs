@@ -24,15 +24,15 @@ namespace Mission08_Team0208.Models
             _context.SaveChanges();
         }
 
-        public void Delete(TaskInfo task)
+        public void Delete(TaskInfo Delete)
         {
-            _context.Tasks.Remove(task);
+            _context.Remove(Delete);
             _context.SaveChanges();
         }
 
-        public void Edit(TaskInfo task)
+        public void Edit(TaskInfo UpdatedInfo)
         {
-            _context.Tasks.Update(task);
+            _context.Update(UpdatedInfo);
             _context.SaveChanges();
         }
     }
