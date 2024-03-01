@@ -2,5 +2,26 @@
     ViewData["Title"] = "Quadrant";
 }
 
-<h1>Welcome</h1>
+<h1 style="text-align:center;">Welcome</h1>
+
+<p style="text-align:center;">Time management is super important in todays world where time is your most important asset. Explore the site to learn more and become productive.</p>
+
+<div style="display:flex; justify-content:center; align-items:center;">
+    <img style="width:60%; " src="~/time_management_matrix.png" />
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<div class="row" style="background-color:#ffffff; align-content:center;">
+    <div class="col-6">
+        <a asp-controller="Home" asp-action="AddOrEdit" style="width:100%;" class="btn btn-primary">Add Task to Matrix</a>
+    </div>
+    <div class="col-6">
+        <a  asp-controller="Home" asp-action="Quadrant" style="width:100%;" class="btn btn-success">View Matrix</a>
+    </div>
+</div>
+
 
