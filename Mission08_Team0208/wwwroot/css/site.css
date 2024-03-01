@@ -21,6 +21,7 @@ body {
   margin-bottom: 60px;
 }
 
+
 .navbar-brand {
     margin-right: auto; /* Pushes the brand to the left */
 }
@@ -41,15 +42,21 @@ body {
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333; /* Adjust color  */
+    color: #333; 
 }
 
 .navbar-nav .nav-link {
     font-size: 1.1rem;
-    color: #555; /* Adjust color */
+    color: #555; 
 }
 
-    .navbar-nav .nav-link:hover {
-        color: #007bff; /* Change color on hover */
-    }
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link:not(.active) {
+    background-color: #e0e0e0; /* Background color on hover */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #afafaf; /* Background color for active page */
+}
+
 
