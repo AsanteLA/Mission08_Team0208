@@ -62,5 +62,14 @@ namespace Mission08_Team0208.Controllers
             }
             
         }
+
+        public IActionResult Quadrant()
+        {
+            var Tasks = _repo.Tasks
+                .OrderBy(x => x.TaskId)
+                .ToList();
+
+            return View(Tasks);
+        }
     }
 }

@@ -8,6 +8,8 @@ namespace Mission08_Team0208.Models
 
         List<Quadrant> Quadrants { get; }
 
+        List<TaskInfo> Tasks { get; }
+
         public void AddTask(TaskInfo task);
 
     }

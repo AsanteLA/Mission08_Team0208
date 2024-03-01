@@ -2,6 +2,8 @@
     ViewData["Title"] = "Quadrant";
 }
 
+@model List<TaskInfo>
+
 <div class="containerRound" style="border: 1px solid black">
     <div class="row">
 
@@ -53,7 +55,7 @@
         <div class="row">
 
             <div class="col" style="border: 1px solid black">
-                <h1>@x.StephenCovey'sTimeManagementMatrix</h1>
+                <h1>StephenCovey'sTimeManagementMatrix</h1>
             </div>
 
         </div>
@@ -62,39 +64,39 @@
             <div class="col-2" style="border: 1px solid black">
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h3>@x.Urgent</h3>
+                <h3>Urgent</h3>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h3>@x.NotUrgent</h3>
+                <h3>Not Urgent</h3>
             </div>
         </div>
 
         <div class="row" style="border: 1px solid black">
             <div class="col-2" style="border: 1px solid black">
-                <h3>@x.Important</h3>
+                <h3>Important</h3>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant1</h5>
+                <h5>Quadrant @x.QuadrantId</h5>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant2</h5>
+                <h5>Quadrant @x.QuadrantId</h5>
             </div>
         </div>
 
         <div class="row" style="border: 1px solid black">
             <div class="col-2" style="border: 1px solid black">
-                <h3>@x.NotImportant</h3>
+                <h3>Not Important</h3>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant3</h5>
+                <h5>Quadrant @x.QuadrantId</h5>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant4</h5>
+                <h5> Quadrant @x.QuadrantId</h5>
             </div>
         </div>
     </div>
-    <div><a class="btn btn-into" asp-controller="Home" asp-action="Edit" asp-route-id="@x.ApplicationId">Edit</a></div>
-    <div><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.ApplicationId">Delete</a></div>
+    <div><a class="btn btn-into" asp-controller="Home" asp-action="Edit" asp-route-id="@x.TaskId">Edit</a></div>
+    <div><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.TaskId">Delete</a></div>
 }
 
 

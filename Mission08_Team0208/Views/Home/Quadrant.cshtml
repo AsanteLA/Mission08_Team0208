@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Quadrant";
 }
+@model List<TaskInfo>
 
 <div class="containerRound" style="border: 1px solid black">
     <div class="row">
@@ -74,10 +75,10 @@
                 <h3>Important</h3>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant1</h5>
+                <h5>@x.QuadrantId</h5>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant2</h5>
+                <h5>@x.QuadrantId</h5>
             </div>
         </div>
 
@@ -86,13 +87,13 @@
                 <h3>NotImportant</h3>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant3</h5>
+                <h5>@x.QuadrantId</h5>
             </div>
             <div class="col-5" style="border: 1px solid black">
-                <h5>@x.Quadrant4</h5>
+                <h5>@x.QuadrantId</h5>
             </div>
         </div>
     </div>
-    <div><a class="btn btn-into" asp-controller="Home" asp-action="Edit" asp-route-id="@x.ApplicationId">Edit</a></div>
-    <div><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.ApplicationId">Delete</a></div>
+    <div><a class="btn btn-into" asp-controller="Home" asp-action="Edit" asp-route-id="@x.TaskId">Edit</a></div>
+    <div><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.TaskId">Delete</a></div>
 }

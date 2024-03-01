@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace Mission08_Team0208.Models
 {
     public class EFMatrixRepository : IMatrixRepository
@@ -10,7 +12,7 @@ namespace Mission08_Team0208.Models
             _context = temp;
         }
 
-        public List<TaskInfo> Tasks => _context.Tasks.ToList();
+        public List<TaskInfo> Tasks => _context.Tasks.Include(x => x.Category).Include(x => x.Quadrant).ToList();
         public List<Category> Categories => _context.Categories.ToList();
 
         public List<Quadrant> Quadrants => _context.Quadrants.ToList();
@@ -21,5 +23,7 @@ namespace Mission08_Team0208.Models
             _context.Tasks.Add(task);
             _context.SaveChanges();
         }
+
+
     }
 }
