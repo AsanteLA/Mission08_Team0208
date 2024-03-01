@@ -1,6 +1,6 @@
 /* Change background color of rows */
 .row, .col {
-    background-color: orange; /*Ugly matching orange */
+    background-color: #85c1e9; /*Ugly matching orange */
 }
 
 .containerRound {
