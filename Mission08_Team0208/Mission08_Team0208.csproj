@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\clock2-removebg-preview.png" />
     <None Include="wwwroot\time_management_matrix.png" />
   </ItemGroup>
 
