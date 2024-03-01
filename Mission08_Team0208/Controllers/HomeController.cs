@@ -19,7 +19,6 @@ namespace Mission08_Team0208.Controllers
             return View();
         }
 
-        [HttpGet]
         public IActionResult AddOrEdit()
         {
             ViewBag.Categories = _repo.Categories
