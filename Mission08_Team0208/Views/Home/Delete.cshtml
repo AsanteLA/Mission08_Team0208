@@ -1,18 +1,19 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "Delete";
 }
 @model TaskInfo
 
 <h2>Record Deletion Page</h2>
-<br /><br />
-<h3>Are you sure you would like to delete the record for @Model.TaskName in quadrant @Model.QuadrantId ?</h3>
+
+
 <form method="post">
-    <input type="hidden" asp-for="QuadrantId" />
+    <input type="hidden" asp-for="TaskId" />
 
-    <button type="submit">Delete</button>
-    <a class="btn btn-info" asp-controller="Home" asp-action="Quadrant">Cancel</a>
+    <br /><br />
+    <h3>Are you sure you would like to delete the record for @Model.TaskName in quadrant @Model.QuadrantId ?</h3>
+    <br /><br />
+    <button type="submit" class="btn btn-outline-danger">Delete</button>
+    <a class="btn btn-info" asp-controller="Home" asp-action="QTest">Cancel</a>
+    
 
-</form>
+</form> 

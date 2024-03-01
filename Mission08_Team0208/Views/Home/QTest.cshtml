@@ -34,8 +34,8 @@
                                 <td>@item.QuadrantId</td>
                                 <td>@item.CategoryId</td>
                                 <td>@item.Completed</td>
-                                <td><button class="btn btn-warning" asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</button></td>
-                                <td><button class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</button></td>
+                                <td><a class="btn btn-warning" asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</a></td>
+                                <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</a></td>
                             </tr>
                         }
                     </tbody>

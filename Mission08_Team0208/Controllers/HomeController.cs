@@ -120,7 +120,7 @@ namespace Mission08_Team0208.Controllers
                 .OrderBy(x => x.QuadrantId)
                 .ToList();
 
-            return View("Delete", RecordToDelete);
+            return View(RecordToDelete);
         }
 
         [HttpPost]
