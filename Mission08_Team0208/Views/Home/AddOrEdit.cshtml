@@ -11,8 +11,8 @@
     <label asp-for="DueDate">Due Date:</label>
     <input asp-for="DueDate">
     <br><br>
-    <label asp-for="Quadrant">Quadrant:</label>
-    <select asp-for="Quadrant">
+    <label asp-for="QuadrantId">Quadrant:</label>
+    <select asp-for="QuadrantId">
         <option value="">Select a Quadrant</option>
         @foreach(Quadrant q in ViewBag.Quadrants)
         {
@@ -20,8 +20,8 @@
         }
     </select>
     <br><br>
-    <label asp-for="Category">Category:</label>
-    <select asp-for="Category">
+    <label asp-for="CategoryId">Category:</label>
+    <select asp-for="CategoryId">
         <option value="">Select a Category</option>
         @foreach (Category c in ViewBag.Categories)
         {

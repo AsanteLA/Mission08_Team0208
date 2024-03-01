@@ -37,6 +37,14 @@ namespace Mission08_Team0208.Controllers
         {
             if(ModelState.IsValid) 
             {
+                ViewBag.Categories = _repo.Categories
+                .OrderBy(x => x.CategoryId)
+                .ToList();
+
+                ViewBag.Quadrants = _repo.Quadrants
+                    .OrderBy(x => x.QuadrantId)
+                    .ToList();
+
                 _repo.AddTask(response);
                 return View("Confirmation", response);
             }
