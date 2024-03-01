@@ -5,6 +5,9 @@
 
 
 <form asp-action="AddOrEdit" method="post">
+
+    <input type="hidden" asp-for="TaskId" />
+
     <label asp-for="TaskName">Task Name:</label>
     <input asp-for="TaskName" >
     <br><br>
