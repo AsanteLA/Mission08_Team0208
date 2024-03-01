@@ -1,3 +1,38 @@
+/* Change background color of rows */
+.row, .col {
+    background-color: orange; /*Ugly matching orange */
+}
+
+.containerRound {
+    border: 1px solid gray;
+    border-radius: 10px; /* Adjust the value as needed */
+    overflow: hidden; /* Ensures that the border-radius is applied correctly */
+}
+
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
 html {
   font-size: 14px;
 }

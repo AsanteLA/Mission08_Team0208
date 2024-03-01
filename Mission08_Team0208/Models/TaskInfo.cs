@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Mission08_Team0208.Models;
 
 public partial class TaskInfo
 {
+    [Key]
     public int TaskId { get; set; }
+
     [Required]
-    public string TaskName { get; set; } = null!;
+    public string TaskName { get; set; }
 
     public string? DueDate { get; set; }
+
+    [ForeignKey("QuadrantId")]
     [Required]
-    public string Quadrant { get; set; } = null!;
+    public int? QuadrantId { get; set; }
+    public Quadrant? Quadrant { get; set; }
 
-    public string? Catergory { get; set; }
+    [ForeignKey("CategoryId")]
+    public int? CategoryId { get; set; }
+    public Category? Category { get; set; }
 
-    public int? Completed { get; set; }
+    public bool? Completed { get; set; }
 }

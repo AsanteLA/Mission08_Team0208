@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Mission08_Team0208.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-eOJMYsd2L2cQQ1T5k0ihFv6j/2jdrKIzAdq+E3KtLURbYBkHq9FwO2y+8xhFuvRWx" 
+    crossorigin="anonymous" asp-append-version="true">
 </head>
 <body>
     <header>
@@ -22,14 +25,15 @@
                         <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
                             <a class="nav-link text-dark", asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Quadrant" ? "active" : "")">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Quadrant">Quadrant</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddOrEdit">Add Task</a>
                         </li>
-                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "AddOrEdit" ? "active" : "")">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddOrEdit">Add</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Quadrant">View Matrix</a>
                         </li>
-                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Delete" ? "active" : "")">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Delete">Delete</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="QTest">View Test</a>
                         </li>
                     </ul>
                 </div>
@@ -50,6 +54,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-GLhlTQ8iK6ZPDZsKX8MO5lA7+UC/Bsz6UcO5SvAmD9V/PdabPyL3S5fGTgYIpeP0"
+    crossorigin="anonymous" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

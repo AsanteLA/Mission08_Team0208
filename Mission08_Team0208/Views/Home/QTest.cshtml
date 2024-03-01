@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Matrix";
+}
+@model List<TaskInfo>
+
+<div class="container">
+    <div class="row">
+        @for (int QuadrantId = 1; QuadrantId <= 4; QuadrantId++)
+        {
+            @* <div class="col-md-1"></div> *@
+            <div class="col-md-5">
+                <!-- Table for Quadrant @QuadrantId -->
+                <h3>Quadrant @QuadrantId</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Task ID</th>
+                            <th>Task Name</th>
+                            <th>Due Date</th>
+                            <th>Quadrant ID</th>
+                            <th>Category ID</th>
+                            <th>Completed</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Where(x => x.QuadrantId == QuadrantId))
+                        {
+                            <tr>
+                                <td>@item.TaskId</td>
+                                <td>@item.TaskName</td>
+                                <td>@item.DueDate</td>
+                                <td>@item.QuadrantId</td>
+                                <td>@item.CategoryId</td>
+                                <td>@item.Completed</td>
+                                <td><a class="btn btn-warning" asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</a></td>
+                                <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            @if (QuadrantId % 2 == 1)
+            {
+                <!-- Add an extra column for space between tables -->
+                <div class="col-md-1"></div>
+            }
+            @* <div class="col-md-1"></div> *@
+        }
+    </div>
+</div>

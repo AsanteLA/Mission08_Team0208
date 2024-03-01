@@ -1,8 +1,3 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 
 @model TaskInfo
 
@@ -10,28 +5,40 @@
 
 
 <form method="post">
+
+    <input type="hidden" asp-for="TaskId" />
+
     <label asp-for="TaskName">Task Name:</label>
-    <input asp-for="TaskName" required><br><br>
-
+    <input asp-for="TaskName" >
+    <br><br>
     <label asp-for="DueDate">Due Date:</label>
-    <input asp-for="DueDate"><br><br>
-
-    <label asp-for="Quadrant">Quadrant:</label>
-    <input asp-for="Quadrant"><br><br>
-
-    <label asp-for="Catergory">Catergory:</label>
-    <select asp-for="Catergory">
-        <option value="Home">Home</option>
-        <option value="School">School</option>
-        <option value="Work">Work</option>
-        <option value="Church">Church</option>
-    </select><br><br>
-
+    <input asp-for="DueDate">
+    <br><br>
+    <label asp-for="QuadrantId">Quadrant:</label>
+    <select asp-for="QuadrantId">
+        <option value="">Select a Quadrant</option>
+        @foreach(Quadrant q in ViewBag.Quadrants)
+        {
+            <option value="@q.QuadrantId">@q.QuadrantName</option>
+        }
+    </select>
+    <br><br>
+    <label asp-for="CategoryId">Category:</label>
+    <select asp-for="CategoryId">
+        <option value="">Select a Category</option>
+        @foreach (Category c in ViewBag.Categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
+    </select>
+    <br><br>
     <label asp-for="Completed">Completed:</label>
     <select asp-for="Completed">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select><br><br>
 
-    <button class="button" type="submit">Submit</button>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+    </select>
+    <br><br>
+    <button type="submit">Submit</button>
+
 </form>
