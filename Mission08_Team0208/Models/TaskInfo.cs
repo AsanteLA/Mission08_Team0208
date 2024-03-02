@@ -11,13 +11,13 @@ public partial class TaskInfo
     [Key]
     public int TaskId { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "You must enter a task name.")]
     public string TaskName { get; set; }
 
     public string? DueDate { get; set; }
 
     [ForeignKey("QuadrantId")]
-    [Required]
+    [Required(ErrorMessage = "You must select a quadrant.")]
     public int? QuadrantId { get; set; }
     public Quadrant? Quadrant { get; set; }
 

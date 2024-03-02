@@ -19,6 +19,7 @@ namespace Mission08_Team0208.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult AddOrEdit()
         {
             ViewBag.Categories = _repo.Categories
@@ -66,20 +67,21 @@ namespace Mission08_Team0208.Controllers
         public IActionResult Quadrant()
         {
             var Tasks = _repo.Tasks
+                .Where(x => x.Completed == false)
                 .OrderBy(x => x.TaskId)
                 .ToList();
 
             return View(Tasks);
         }
 
-        public IActionResult QTest()
-        {
-            var Tasks = _repo.Tasks
-                .OrderBy(x => x.TaskId)
-                .ToList();
+        //public IActionResult QTest()
+        //{
+        //    var Tasks = _repo.Tasks
+        //        .OrderBy(x => x.TaskId)
+        //        .ToList();
 
-            return View(Tasks);
-        }
+        //    return View(Tasks);
+        //}
 
         [HttpGet]
         public IActionResult Edit(int id)
@@ -102,7 +104,7 @@ namespace Mission08_Team0208.Controllers
         public IActionResult Edit(TaskInfo UpdatedInfo)
         {
             _repo.Edit(UpdatedInfo);
-            return RedirectToAction("QTest");
+            return RedirectToAction("Quadrant");
         }
 
         [HttpGet]
@@ -127,7 +129,7 @@ namespace Mission08_Team0208.Controllers
         {
             _repo.Delete(Delete);
 
-            return RedirectToAction("QTest");
+            return RedirectToAction("Quadrant");
         }
     }
 }

@@ -27,15 +27,15 @@
                             <a class="nav-link text-dark", asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "AddOrEdit" ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddOrEdit">Add Task</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Quadrant" ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Quadrant">View Matrix</a>
                         </li>
-                        <li class="nav-item">
+                        @* <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="QTest">View Test</a>
-                        </li>
+                        </li> *@
                     </ul>
                 </div>
             </div>
