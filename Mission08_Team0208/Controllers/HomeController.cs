@@ -67,20 +67,21 @@ namespace Mission08_Team0208.Controllers
         public IActionResult Quadrant()
         {
             var Tasks = _repo.Tasks
+                .Where(x => x.Completed == false)
                 .OrderBy(x => x.TaskId)
                 .ToList();
 
             return View(Tasks);
         }
 
-        public IActionResult QTest()
-        {
-            var Tasks = _repo.Tasks
-                .OrderBy(x => x.TaskId)
-                .ToList();
+        //public IActionResult QTest()
+        //{
+        //    var Tasks = _repo.Tasks
+        //        .OrderBy(x => x.TaskId)
+        //        .ToList();
 
-            return View(Tasks);
-        }
+        //    return View(Tasks);
+        //}
 
         [HttpGet]
         public IActionResult Edit(int id)
